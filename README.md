@@ -7,7 +7,12 @@ This has been rewritten from scratch to take advantage of and to make it (hopefu
 # Running the project
 
 You can see a live demo of this project [here](http://zonae-commerce.runasp.net/).
-# Use Coupon [Ghazi20]
+# Use Coupon: [Ghazi20]
+
+# You can also try admin role:
+Username:admin@test.com
+Password:Pa$$w0rd
+
 You can also run this app locally.  To run this project locally you will need to have installed:
 
 1. Docker
