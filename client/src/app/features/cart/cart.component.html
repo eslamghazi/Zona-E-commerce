@@ -1,0 +1,25 @@
+<section>
+  @if (cartService.cart()?.items?.length! > 0) {
+    <div class="flex flex-col lg:flex-row w-full items-start gap-6 mt-8 sm:mt-16 lg:mt-32">
+      <!-- Cart Items -->
+      <div class="w-full lg:w-3/4">
+        @for (item of cartService.cart()?.items; track item.productId) {
+          <app-cart-item [item]="item"></app-cart-item>
+        }
+      </div>
+
+      <!-- Order Summary -->
+      <div class="w-full lg:w-1/4 lg:sticky lg:top-32">
+        <app-order-summary></app-order-summary>
+      </div>
+    </div>
+  } @else {
+    <!-- Empty State -->
+    <app-empty-state
+      message="Your shopping cart is empty"
+      icon="remove_shopping_cart"
+      actionText="Go to shop"
+      (action)="onAction()"
+    />
+  }
+</section>

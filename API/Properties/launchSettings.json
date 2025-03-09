@@ -1,0 +1,32 @@
+﻿{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "applicationUrl": "http://localhost:5000;https://localhost:5001",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "STRIPE_PUBLISHABLE_KEY": "pk_test_51QvtafC8cb1o7RMNGxLEyAcW3rwTodJKNnsv92CMjtMzErDso6LRblCb1JLhjKVByUpHoMyJ6VNImdKLOQjY3xio00zbN8xkkZ",
+        "STRIPE_SECRET_KEY": "sk_test_51QvtafC8cb1o7RMNHxJlq6FTHldzODuYtReXVvZKdsKSRu8oWscXHS3pA0E5xsghsPnl0GxrI9NqRjaGGdjHkudK007vnHcbDp",
+        "STRIPE_WEBHOOK_SECRET": "whsec_47def9526a2bdf0048ce0d969da0badd990e4906eb097d041e9f5664b58dfc3a",
+        "CONNECTION_STRING": "Server=db15212.public.databaseasp.net; Database=db15212; User Id=db15212; Password=wN!54=fLP9+j; Encrypt=True; TrustServerCertificate=True; MultipleActiveResultSets=True;",
+        "REDIS_CONNECTION": "right-egret-57081.upstash.io:6379,password=Ad75AAIjcDExNGI2N2MwNDk0ZTM0MzUyOTQ2MTQ3YTJhYzViODc5NnAxMA,ssl=True,abortConnect=False"
+      }
+    },
+    "API": {
+      "commandName": "Project",
+      "launchBrowser": false,
+      "applicationUrl": "http://zonae-commerce.runasp.net;https://zonae-commerce.runasp.net",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Production",
+        "STRIPE_PUBLISHABLE_KEY": "pk_test_51QvtafC8cb1o7RMNGxLEyAcW3rwTodJKNnsv92CMjtMzErDso6LRblCb1JLhjKVByUpHoMyJ6VNImdKLOQjY3xio00zbN8xkkZ",
+        "STRIPE_SECRET_KEY": "sk_test_51QvtafC8cb1o7RMNHxJlq6FTHldzODuYtReXVvZKdsKSRu8oWscXHS3pA0E5xsghsPnl0GxrI9NqRjaGGdjHkudK007vnHcbDp",
+        "STRIPE_WEBHOOK_SECRET": "whsec_47def9526a2bdf0048ce0d969da0badd990e4906eb097d041e9f5664b58dfc3a",
+        "CONNECTION_STRING": "Server=db15212.public.databaseasp.net; Database=db15212; User Id=db15212; Password=wN!54=fLP9+j; Encrypt=True; TrustServerCertificate=True; MultipleActiveResultSets=True;",
+        "REDIS_CONNECTION": "right-egret-57081.upstash.io:6379,password=Ad75AAIjcDExNGI2N2MwNDk0ZTM0MzUyOTQ2MTQ3YTJhYzViODc5NnAxMA,ssl=True,abortConnect=False"
+      }
+    }
+  }
+}

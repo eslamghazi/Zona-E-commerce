@@ -1,0 +1,16 @@
+@if (busyService.busyRequestCount === 0) {
+  <div class="w-full max-w-screen-md mx-auto mt-32 px-6 py-8 bg-white rounded-lg shadow-md">
+      <div class="flex flex-col items-center justify-center py-8 w-full">
+          <mat-icon class="text-blue-600 text-6xl mb-6">{{ icon() }}</mat-icon>
+          <p class="text-gray-900 text-2xl font-bold mb-4">
+              {{ message() }}
+          </p>
+          <button
+              mat-flat-button
+              (click)="onAction()"
+              class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition">
+              {{ actionText() }}
+          </button>
+      </div>
+  </div>
+}

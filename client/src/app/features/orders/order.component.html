@@ -1,0 +1,49 @@
+<div class="mx-auto mt-32 px-4 sm:px-6 lg:px-8 max-w-7xl">
+  <!-- Page Title -->
+  <h2 class="font-semibold text-2xl mb-6 text-center">My Orders</h2>
+
+  <!-- Orders Table -->
+  <div class="flex flex-col">
+    <div class="w-full overflow-x-auto">
+      <table class="min-w-full divide-y divide-gray-200 cursor-pointer">
+        <!-- Table Header -->
+        <thead class="bg-gray-50">
+          <tr class="uppercase text-gray-600 text-sm">
+            <th class="text-center px-4 py-3 sm:px-6">Order</th>
+            <th class="text-left px-4 py-3 sm:px-6">Date</th>
+            <th class="text-left px-4 py-3 sm:px-6">Total</th>
+            <th class="text-left px-4 py-3 sm:px-6">Status</th>
+          </tr>
+        </thead>
+
+        <!-- Table Body -->
+        <tbody class="bg-white divide-y divide-gray-200">
+          @for (order of orders; track order.id) {
+            <tr routerLink="/orders/{{order.id}}" class="hover:bg-gray-100 transition-colors">
+              <!-- Order ID -->
+              <td class="px-4 py-3 sm:px-6 text-center"># {{order.id}}</td>
+
+              <!-- Order Date -->
+              <td class="px-4 py-3 sm:px-6">{{order.orderDate | date: 'medium'}}</td>
+
+              <!-- Order Total -->
+              <td class="px-4 py-3 sm:px-6">{{order.total | currency}}</td>
+
+              <!-- Order Status -->
+              <td class="px-4 py-3 sm:px-6">
+                <span class="px-2 py-1 text-sm rounded-full"
+                      [ngClass]="{
+                        'bg-green-100 text-green-800': order.status === 'Completed',
+                        'bg-yellow-100 text-yellow-800': order.status === 'Pending',
+                        'bg-red-100 text-red-800': order.status === 'Cancelled'
+                      }">
+                  {{order.status}}
+                </span>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
